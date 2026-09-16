@@ -10,7 +10,7 @@ Lay's Crunch Hub is a web-based e-commerce platform for browsing Lay's products,
 - Add to Cart
 - Shopping Cart
 - Payment Page
-- User Profile
+-Logout page
 
 ## Technologies Used
 
@@ -19,4 +19,3 @@ Lay's Crunch Hub is a web-based e-commerce platform for browsing Lay's products,
 - JavaScript
 - Python
 - Flask
-- MySQL
