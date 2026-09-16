@@ -64,22 +64,22 @@ To develop a user-friendly e-commerce platform for browsing and purchasing Lay's
 ## 📸 Screenshots
 
 ### 1. Register
-![Register](screenshots/register.png)
+![Register](register.png)
 
 ### 2. Login
-![Login](screenshots/login.png)
+![Login](login.png)
 
 ### 3. Dashboard
-![Dashboard](screenshots/dashboard.png)
+![Dashboard](dashboard.png)
 
 ### 4. Cart
-![Cart](screenshots/cart.png)
+![Cart](cart.png)
 
 ### 5. Payment
-![Payment](screenshots/payment.png)
+![Payment](payment.png)
 
 ### 6. Logout
-![Logout](screenshots/logout.png)
+![Logout](logout.png)
 
 ## 👩‍💻 Developed By
 
