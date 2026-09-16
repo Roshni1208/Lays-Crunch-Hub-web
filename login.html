@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lays Login & Register</title>
+</head>
+
+<style>
+    body{
+           background-image: url("../static/background_lays.png");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center 100px;
+            margin: 0;
+            height: 100vh;
+
+    }
+</style>
+<body>
+
+    <center>
+        <h1>🛍️Lay's Crunch Hub🛒</h1>
+
+        <!-- Login Form -->
+        <h2>Login</h2>
+
+        <form action="/login" method="POST">
+
+            <input type="text" name="username" placeholder="Enter Username" required><br><br>
+
+            <input type="email" name="email" placeholder="Enter Email" required><br><br>
+
+            <input type="password" name="password" placeholder="Enter Password" required><br><br>
+
+            <input type="submit" value="Login">
+            <input type="reset" value="Clear">
+        </form>
+
+    </center>
+
+</body>
+</html>

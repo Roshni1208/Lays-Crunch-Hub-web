@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Lays Crunch Hub</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<style>
+
+body{
+            background-image: url("../static/cart_bg.png");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center 100px;
+            margin: 0;
+            height: 100vh;
+}
+
+.navbar{
+    background: #A8E6A3;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 30px;
+}
+
+.logo{
+    font-size:30px;
+    font-weight:bold;
+    color:red;
+}
+
+button{
+    background:red;
+    color:white;
+    border:none;
+    padding:10px 18px;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:16px;
+}
+
+button:hover{
+    background:darkred;
+}
+
+h1{
+    text-align:center;
+    color:black;
+    margin-top:30px;
+    font-size:45px;
+    text-shadow:2px 2px 6px black;
+}
+
+p{
+    text-align:center;
+    color:black;
+    font-size:22px;
+    text-shadow:2px 2px 5px black;
+}
+
+.products{
+    display:grid;
+    grid-template-columns:repeat(4, 1fr);
+    gap:25px;
+    padding:30px;
+    justify-items:center;
+}
+
+.card{
+    width:220px;
+    height:340px;
+    background:white;
+    border-radius:15px;
+    text-align:center;
+    padding:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.3);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+.card img{
+    width:140px;
+    height:140px;
+    object-fit:contain;
+    display:block;
+    margin:0 auto 10px;
+    opacity:0.25;
+    transition:0.5s;
+}
+
+.product-info{
+    opacity:0;
+}
+
+.card:hover img{
+    opacity:1;
+    transform:scale(1.05);
+}
+
+.card:hover .product-info{
+    opacity:1;
+}
+
+.card h3{
+    color:red;
+}
+
+.card p{
+    color:black;
+    font-size:18px;
+}
+
+.cart-btn{
+    background:red;
+    color:white;
+    border:none;
+    padding:10px 20px;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:16px;
+    transition:0.3s ease;
+    box-shadow:0 0 8px red;
+}
+
+.cart-btn:hover{
+    transform:translateY(-6px);
+    box-shadow:
+        0 0 10px red,
+        0 0 20px red,
+        0 0 35px orange;
+    background:darkred;
+}
+
+/* Hover Effect */
+.cart-btn:hover{
+    background:#c62828;
+    transform:translateY(-6px) scale(1.05);
+    box-shadow:
+        0 0 10px red,
+        0 0 20px orange,
+        0 0 30px gold;
+}
+
+button{
+    background:red;
+    color:white;
+    border:none;
+    padding:10px 18px;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:16px;
+}
+
+button:hover{
+    background:darkred;
+}
+
+.menu a{
+    color:black;
+    text-decoration:none;
+    margin-left:20px;
+    font-size:18px;
+    font-weight:bold;
+}
+
+.menu a i{
+    margin-right:6px;
+}
+
+.menu a:hover{
+    color:#FFD700;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="navbar">
+<div class="logo"> Lay's Crunch Hub </div>
+
+<div class="menu">
+<a href="/dashboard">
+    <i class="fa-solid fa-house"></i> Home</a>
+<a href="/cart"> 
+    <i class="fa-solid fa-cart-shopping"></i> Cart</a>
+<a href="/payment">
+    <i class="fa-solid fa-credit-card"></i> Payment</a>
+<a href="/profile">
+    <i class="fa-solid fa-user"></i> profile</a>
+<a href="/logout">
+    <i class="fa-solid fa-right-from-bracket"></i>Logout</a>
+
+</div>
+</div>
+
+<h1>🎉Welcome to Lays Crunch Hub !🎉</h1>
+
+<p>🥰Choose Your Favourite Lays Flavour🥰</p>
+
+<div class="products">
+
+<div class="card">
+
+    <img src="../static/classic.png" alt="Classic Salted">
+
+    <div class="product-info">
+        <h3>Classic Salted</h3>
+        <p><b>Flavour:</b> Classic Salt</p>
+        <p>₹20</p>
+
+        <a href="/add_to_cart">
+            <button class="cart-btn">Add to Cart</button>
+        </a>
+    </div>
+
+</div>
+
+<div class="card">
+<img src="../static/craem.png" alt="American Style Cream & Onion">
+<h3>American Style Cream & Onion</h3>
+<p>₹40</p>
+<a href="/add_to_cart">
+    <button class="cart-btn">Add to Cart</button>
+</a>
+</div>
+
+<div class="card">
+<img src="../static/tomtango.png" alt="Tomato Tango">
+<h3>Tomato Tango</h3>
+<p>₹30</p>
+<a href="/add_to_cart">
+    <button class="cart-btn">Add to Cart</button>
+</a>
+</div>
+
+<div class="card">
+    <img src="../static/chile.png" alt="Lime & Chile">
+    <h3>Lime & Chile</h3>
+    <p>₹20</p>
+    <a href="/add_to_cart">
+    <button class="cart-btn">Add to Cart</button>
+</a>
+</div>
+
+<div class="card">
+    <img src="../static/garmtcheese.png" alt="Gourmet Cheese">
+    <h3>Gourmet Cheese</h3>
+    <p>₹35</p>
+    <a href="/add_to_cart">
+    <button class="cart-btn">Add to Cart</button>
+</a>
+</div>
+
+<div class="card">
+    <img src="../static/maxpep.png" alt="Mexx Pepper BBQ">
+    <h3>Mexx Pepper BBQ</h3>
+    <p>₹50</p>
+   <a href="/add_to_cart">
+    <button class="cart-btn">Add to Cart</button>
+</a>
+</div>
+
+<div class="card">
+    <img src="../static/sizzlinhot.png" alt="Sizzling Hot & Spicy">
+    <h3>Sizzling Hot & Spicy</h3>
+    <p>₹60</p>
+    <a href="/add_to_cart">
+    <button class="cart-btn">Add to Cart</button>
+</a>
+</div>
+
+<div class="card">
+    <img src="../static/wafersalted.png" alt="Wafer Salted">
+    <h3>Wafer Salted</h3>
+    <p>₹25</p>
+    <a href="/add_to_cart">
+    <button class="cart-btn">Add to Cart</button>
+</a>
+</div>
+
+</div>
+
+</body>
+</html>

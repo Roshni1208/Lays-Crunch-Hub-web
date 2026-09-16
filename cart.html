@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lay's Crunch Hub Cart</title>
+
+    <style>
+
+        body{
+            background-image: url("../static/cart_bg.png");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center 100px;
+            margin: 0;
+            height: 100vh;
+        }
+
+        .navbar{
+            width: 100%;
+            background-color: light green;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 25px;
+            box-sizing: border-box;
+        }
+
+        .logo{
+            color: darkred;
+            font-size: 36px;
+            font-weight: bold;
+        }
+
+
+        .header{
+            background-color: #00ffb3;
+            color: #C00000;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .main{
+            background-color: light green;
+            display: flex;
+            margin: 20px;
+            gap: 20px;
+        }
+
+        .cart-title{
+            background-color: light green;
+            padding: 15px;
+            margin: 15px;
+            border-radius: 10px;
+        }
+
+        .cart-title h2{
+            margin: 0;
+            color: darkred;
+            font-size: 32px;
+        }
+        
+        .menu{
+            display: flex;
+            gap: 15px;
+        }
+
+        .menu a{
+            text-decoration: none;
+            color: black;
+            font-size: 20px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .menu a:hover{
+            color: red;
+        }
+
+        .cart-items{
+            flex: 3;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .cart-item{
+            display: flex;
+            border-bottom: 1px solid lightgray;
+            padding: 20px 0;
+        }
+
+        .cart-item img{
+            width: 180px;
+            height: 180px;
+            border-radius: 10px;
+        }
+
+        .details{
+            margin-left: 30px;
+        }
+
+        .price{
+            color: green;
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .quantity-box{
+    display:flex;
+    align-items:center;
+    gap:15px;
+    margin-top:10px;
+}
+
+.quantity-box button{
+    width:35px;
+    height:35px;
+    border:none;
+    border-radius:50%;
+    background:#FFD700;
+    font-size:20px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+.quantity-box button:hover{
+    background:orange;
+}
+
+.quantity-box span{
+    font-size:22px;
+    font-weight:bold;
+    min-width:30px;
+    text-align:center;
+}
+
+        .summary{
+            flex: 1;
+            background-color: light green;
+            padding: 20px;
+            border-radius: 10px;
+            height: fit-content;
+        }
+
+        .checkout-btn{
+            width: 100%;
+            padding: 12px;
+            background-color: #FFD700;
+            border: none;
+            border-radius: 20px;
+            font-size: 16px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .checkout-btn:hover{
+            background-color: orange;
+        }
+
+        .continue-btn{
+            width: 100%;
+            padding: 12px;
+            margin-top: 10px;
+            background-color: green;
+            color: white;
+            border: none;
+            border-radius: 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .continue-btn:hover{
+            background-color: darkgreen;
+        }
+
+        select{
+    width:220px;
+    padding:8px;
+    margin:8px 0;
+    border:2px solid green;
+    border-radius:8px;
+    font-size:16px;
+    cursor:pointer;
+}
+
+    </style>
+
+</head>
+
+<body>
+
+<div class="navbar">
+    
+    <div class="logo">
+        🛒Lay's Crunch Hub Cart🛒
+    </div>
+
+    <div class="menu">
+        <a href="/dashboard">🏠Home</a>
+        <a href="/cart">🛒Cart</a>
+        <a href="/payment">💰payment</a>
+        <a href="/profile">👤Profile</a>
+        <a href="/logout">➡️Logout</a>
+    </div>
+</div>
+
+<div class="cart-title">
+    <center>
+        <h2>🛒🛍️Your Shopping Cart🛒🛍️</h2>
+    </center>
+</div>
+
+<div class="cart-item">
+
+<img src="../static/craem.png" alt="American Style Cream & Onion">
+
+<div class="details">
+
+<h3>Lay's American Style Cream & Onion</h3>
+
+<p><b>Flavour:</b></p>
+
+<select name="cream_flavour">
+    <option>American Style Cream & Onion</option>
+    <option>Classic Salted</option>
+    <option>Magic Masala</option>
+    <option>Tomato Tango</option>
+    <option>Lime & Chile</option>
+    <option>Gourmet Cheese</option>
+    <option>Maxx Pepper BBQ</option>
+    <option>Sizzling Hot & Spicy</option>
+    <option>Wafer Salted</option>
+</select>
+
+<p class="price">₹40</p>
+
+Quantity:
+
+<p>Quantity:</p>
+
+<div class="quantity-box">
+    <button onclick="changeQty('cream',-1)">-</button>
+
+    <span id="creamQty">1</span>
+
+    <button onclick="changeQty('cream',1)">+</button>
+</div>
+
+<p>✔ In Stock</p>
+
+</div>
+
+</div>
+
+
+<div class="cart-item">
+
+<img src="../static/magicma.png" alt="Magic Masala">
+
+<div class="details">
+
+<h3>Lay's Magic Masala</h3>
+
+<p><b>Flavour:</b></p>
+
+<select name="magic_flavour">
+    <option>Magic Masala</option>
+    <option>Classic Salted</option>
+    <option>American Style Cream & Onion</option>
+    <option>Tomato Tango</option>
+    <option>Lime & Chile</option>
+    <option>Gourmet Cheese</option>
+    <option>Maxx Pepper BBQ</option>
+    <option>Sizzling Hot & Spicy</option>
+    <option>Wafer Salted</option>
+</select>
+
+<p class="price">₹25</p>
+
+Quantity:
+
+<p>Quantity:</p>
+
+<div class="quantity-box">
+    <button onclick="changeQty('magic',-1)">-</button>
+
+    <span id="magicQty">1</span>
+
+    <button onclick="changeQty('magic',1)">+</button>
+</div>
+
+<p>✔ In Stock</p>
+
+</div>
+
+</div>
+
+
+<div class="cart-item">
+
+<img src="../static/tomtango.png" alt="Tomato Tango">
+
+<div class="details">
+
+<h3>Lay's Tomato Tango  </h3>
+
+<p><b>Flavour:</b></p>
+
+<select name="magic_flavour">
+    <option>Magic Masala</option>
+    <option>Classic Salted</option>
+    <option>American Style Cream & Onion</option>
+    <option>Tomato Tango</option>
+    <option>Lime & Chile</option>
+    <option>Gourmet Cheese</option>
+    <option>Maxx Pepper BBQ</option>
+    <option>Sizzling Hot & Spicy</option>
+    <option>Wafer Salted</option>
+</select>
+
+<p class="price">₹30</p>
+
+Quantity:
+
+<p>Quantity:</p>
+
+<div class="quantity-box">
+    <button onclick="changeQty('tomato',-1)">-</button>
+
+    <span id="tomatoQty">1</span>
+
+    <button onclick="changeQty('tomato',1)">+</button>
+</div>
+
+<p>✔ In Stock</p>
+
+</div>
+
+</div>
+
+</div>
+
+
+<div class="summary">
+
+<h2>Order Summary</h2>
+
+<hr>
+
+<h3>Total Items :
+<span id="totalItems">3</span>
+</h3>
+
+<h3>Total Price :
+₹<span id="totalPrice">95</span>
+</h3>
+
+<p>Delivery: <b>FREE</b></p>
+
+<h2>Total: ₹<span id="totalPrice2">95</span></h2>
+
+<br>
+
+    <button class="checkout-btn"
+    onclick="showMessage()">
+        Proceed to Payment
+    </button>
+
+<br><br>
+
+<a href="/dashboard">
+<button class="continue-btn">
+Continue Shopping
+</button>
+</a>
+
+<script>
+
+let quantity = {
+    cream: 1,
+    magic: 1,
+    tomato: 1
+};
+
+const price = {
+    cream: 40,
+    magic: 25,
+    tomato: 30
+};
+
+function changeQty(item, value) {
+
+    quantity[item] += value;
+
+    if (quantity[item] < 1) {
+        quantity[item] = 1;
+    }
+
+    document.getElementById(item + "Qty").innerHTML = quantity[item];
+
+    updateCart();
+}
+
+function updateCart() {
+
+    let totalItems =
+        quantity.cream +
+        quantity.magic +
+        quantity.tomato;
+
+    let totalPrice =
+        quantity.cream * price.cream +
+        quantity.magic * price.magic +
+        quantity.tomato * price.tomato;
+
+    document.getElementById("totalItems").innerHTML = totalItems;
+    document.getElementById("totalPrice").innerHTML = totalPrice;
+    document.getElementById("totalPrice2").innerHTML = totalPrice;
+}
+
+async function saveCart(){
+
+    await fetch("/update_cart", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            cream: quantity.cream,
+            magic: quantity.magic,
+            tomato: quantity.tomato
+        })
+    });
+
+}
+
+async function showMessage() {
+
+    await saveCart();   // Save the quantities first
+
+    alert("✅ Product Added Successfully!");
+
+    window.location.href = "/payment";
+}
+
+updateCart();
+
+</script>
+
+</div>
+
+</div>
+
+</body>
+</html>

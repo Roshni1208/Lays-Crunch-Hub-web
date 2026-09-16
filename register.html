@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lays Register</title>
+</head>
+
+<style>
+
+    body{
+            background-image: url("../static/wood.png");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center top;
+            margin: 0;
+            height: 100vh;
+}
+</style>
+
+    <center>
+        <h1>🛍️Lay's Crunch Hub🛒</h1>
+
+        <!-- Register Form -->
+        <h2>Register</h2>
+
+        <form action="/register" method="POST">
+           <input type="text" name="username" placeholder="Enter Name" required><br><br>
+           <input type="email" name="email" placeholder="Enter Email" required><br><br>
+           <input type="tel" name="mobile" placeholder="Enter Mobile" required><br><br>
+           <input type="password" name="password" placeholder="Create Password" required><br><br>
+           <input type="password" name="confirm_password" placeholder="Confirm Password" required><br><br>
+           <input type="submit" value="Register">
+
+           <a href="/login">
+               <input type="button" value="Login">
+           </a>
+        </form>
+
+    </center>
+
+</body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lay's Crunch Hub - Logout</title>
+
+    <style>
+        body{
+            margin:0;
+            font-family:Arial, sans-serif;
+            background-image:url("../static/cart_bg.png");
+            background-size:cover;
+            background-repeat:no-repeat;
+            background-position:center;
+        }
+
+        .navbar{
+            background:lightgreen;
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            padding:18px 30px;
+        }
+
+        .logo{
+            color:darkred;
+            font-size:34px;
+            font-weight:bold;
+        }
+
+        .menu a{
+            text-decoration:none;
+            color:black;
+            margin-left:20px;
+            font-size:18px;
+            font-weight:bold;
+        }
+
+        .menu a:hover{
+            color:red;
+        }
+
+        .logout-box{
+            width:450px;
+            margin:80px auto;
+            background:rgba(255,255,255,0.95);
+            padding:35px;
+            text-align:center;
+            border-radius:20px;
+            box-shadow:0 0 20px rgba(0,0,0,0.3);
+        }
+
+        .logout-box h1{
+            color:darkred;
+            margin-bottom:10px;
+        }
+
+        .logout-box h2{
+            color:green;
+        }
+
+        .logout-box p{
+            font-size:18px;
+            color:#444;
+        }
+
+        .emoji{
+            font-size:70px;
+        }
+
+        .btn{
+            display:inline-block;
+            margin-top:20px;
+            padding:12px 30px;
+            background:red;
+            color:white;
+            text-decoration:none;
+            border-radius:10px;
+            font-size:18px;
+            font-weight:bold;
+        }
+
+        .btn:hover{
+            background:darkred;
+        }
+    </style>
+
+</head>
+
+<body>
+
+<div class="navbar">
+
+    <div class="logo">🛒 Lay's Crunch Hub</div>
+
+    <div class="menu">
+        <a href="/dashboard">🏠 Home</a>
+        <a href="/cart">🛒 Cart</a>
+        <a href="/payment">💰payment</a>
+        <a href="/profile">👤 Profile</a>
+        <a href="/logout">🚪 Logout</a>
+    </div>
+
+</div>
+
+<div class="logout-box">
+
+    <div class="emoji">👋</div>
+
+    <h1>Logged Out Successfully!</h1>
+
+    <h2>🙏🏻Thank You for Visiting Lay's Crunch Hub🙏🏻</h2>
+
+    <p>
+        You have been logged out Successfully.<br><br>
+        We hope to see you again soon!😉
+    </p>
+
+    <a href="/login" class="btn">
+        Login Again
+    </a>
+
+</div>
+
+</body>
+</html>
